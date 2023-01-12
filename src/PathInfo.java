@@ -7,6 +7,7 @@ public class PathInfo {
     static void show(String id, Object p) {
         System.out.println(id + ": " + p);
     }
+
     static void info(Path p) {
         show("toString", p);
         show("Exists", Files.exists(p));
@@ -18,6 +19,7 @@ public class PathInfo {
         show("Root", p.getRoot());
         System.out.println("******************");
     }
+
     public static void main(String[] args) {
         System.out.println(System.getProperty("os.name"));
         info(Paths.get(
@@ -29,7 +31,7 @@ public class PathInfo {
         info(ap.getParent());
         try {
             info(p.toRealPath());
-        } catch(IOException e) {
+        } catch (IOException e) {
             System.out.println(e);
         }
         URI u = p.toUri();
