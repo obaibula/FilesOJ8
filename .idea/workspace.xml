@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35b8e2ba-1488-4759-afc9-dee585a4f2a1" name="Changes" comment="Add first class">
-      <change afterPath="$PROJECT_DIR$/file1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PartsOfPaths.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/PartsOfPathsTest.java" afterDir="false" />
+    <list default="true" id="35b8e2ba-1488-4759-afc9-dee585a4f2a1" name="Changes" comment="Made some tests">
+      <change afterPath="$PROJECT_DIR$/src/AddAndSubtractPaths.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/PathAnalysis.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/PathAnalysisTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/ResolRelat.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/PathInfoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/PathInfoTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FilesOJ8.iml" beforeDir="false" afterPath="$PROJECT_DIR$/FilesOJ8.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/file1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/file1.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,12 +44,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -71,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673499131498</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Made some tests">
+      <created>1673518571323</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673518571323</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -88,6 +101,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="My first commit" />
     <MESSAGE value="Add first class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add first class" />
+    <MESSAGE value="Made some tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some tests" />
   </component>
 </project>
