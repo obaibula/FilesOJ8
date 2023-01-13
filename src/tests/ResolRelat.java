@@ -11,7 +11,5 @@ public class ResolRelat {
         path = path.resolve(Paths.get("file1.txt"));
         System.out.println(path);
         path = path.relativize(Paths.get("C:\\Users\\kuznetsov.aa"));
-        System.out.println(path.toAbsolutePath().normalize());
-
     }
 }
