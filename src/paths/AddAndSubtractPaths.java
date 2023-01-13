@@ -1,3 +1,5 @@
+package paths;
+
 import org.jetbrains.annotations.NotNull;
 
 import java.nio.file.*;
@@ -23,7 +25,7 @@ public class AddAndSubtractPaths {
     public static void main(String[] args) {
         System.out.println(System.getProperty("os.name"));
         System.out.println(base);
-        Path p = Paths.get("src\\AddAndSubtractPaths.java")
+        Path p = Paths.get("src\\paths.AddAndSubtractPaths.java")
                 .toAbsolutePath();
         show(1, p);
         Path convoluted = p.getParent().getParent()

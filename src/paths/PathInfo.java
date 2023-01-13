@@ -1,3 +1,5 @@
+package paths;
+
 import java.nio.file.*;
 import java.net.URI;
 import java.io.File;

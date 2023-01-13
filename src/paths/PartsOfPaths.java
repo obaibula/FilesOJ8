@@ -1,10 +1,12 @@
+package paths;
+
 import java.nio.file.*;
 
 public class PartsOfPaths {
     public static void main(String[] args) {
         System.out.println(System.getProperty("os.name"));
         Path p =
-                Paths.get("src\\PartsOfPaths.java").toAbsolutePath();
+                Paths.get("src\\paths.PartsOfPaths.java").toAbsolutePath();
         for(int i = 0; i < p.getNameCount(); i++)
             System.out.println(p.getName(i));
         System.out.println("ends with '.java': " +
@@ -24,12 +26,12 @@ Git
 OnJava8
 ExtractedExamples
 files
-PartsOfPaths.java
+paths.PartsOfPaths.java
 ends with '.java': false
 Git: false : false
 OnJava8: false : false
 ExtractedExamples: false : false
 files: false : false
-PartsOfPaths.java: false : true
+paths.PartsOfPaths.java: false : true
 Starts with C:\ true
 */

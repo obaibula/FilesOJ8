@@ -1,3 +1,5 @@
+package paths;
+
 import java.nio.file.*;
 import java.io.IOException;
 
@@ -10,7 +12,7 @@ public class PathAnalysis {
     main(String[] args) throws IOException {
         System.out.println(System.getProperty("os.name"));
         Path p =
-                Paths.get("src\\PathAnalysis.java").toAbsolutePath();
+                Paths.get("src\\paths.PathAnalysis.java").toAbsolutePath();
         say("Exists", Files.exists(p));
         say("Directory", Files.isDirectory(p));
         say("Executable", Files.isExecutable(p));
