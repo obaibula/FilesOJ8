@@ -1,26 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="35b8e2ba-1488-4759-afc9-dee585a4f2a1" name="Changes" comment="New Acc">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/directories/Directories.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/directories/RmDir.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/tests/DirectoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/DIR_963894092209008414/pre7965761299622748884.non" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/Hello.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/bag/foo/bar/baz/4397038676806047690.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/bag/foo/bar/baz/File.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/bar/baz/bag/foo/4793968052551643864.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/bar/baz/bag/foo/File.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/baz/bag/foo/bar/4890067630416526798.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/baz/bag/foo/bar/File.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/foo/bar/baz/bag/1057964041829486103.tmp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/foo/bar/baz/bag/File.txt" afterDir="false" />
+    <list default="true" id="35b8e2ba-1488-4759-afc9-dee585a4f2a1" name="Changes" comment="Made some tests">
+      <change afterPath="$PROJECT_DIR$/Cheese.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Cheese.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bytes.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/filesystems/FileSystemDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/findingfiles/Find.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/readingwritingfiles/ListOfLines.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/readingwritingfiles/ReadLineStream.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/readingwritingfiles/StreamInAndOut.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/readingwritingfiles/Writing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/tests/FindTesting.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/watchingapath/PathWatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/watchingapath/TreeWatcher.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/bar/baz/bag/foo/9111442827522073714.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/baz/bag/foo/bar/5099943814860104330.tmp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/foo/bar/baz/bag/2479169705503560191.tmp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AddAndSubtractPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paths/AddAndSubtractPaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PartsOfPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paths/PartsOfPaths.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PathAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paths/PathAnalysis.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PathInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paths/PathInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/directories/Directories.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/directories/Directories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests/DirectoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DirectoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/DIR_963894092209008414/pre7965761299622748884.non" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/Hello.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/bag/foo/bar/baz/4397038676806047690.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/bag/foo/bar/baz/File.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/bag/foo/bar/baz/File.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/bar/baz/bag/foo/4793968052551643864.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/bar/baz/bag/foo/File.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/bar/baz/bag/foo/File.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/baz/bag/foo/bar/4890067630416526798.tmp" beforeDir="false" afterPath="$PROJECT_DIR$/test/bag/foo/bar/baz/4120745399911404459.tmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/baz/bag/foo/bar/File.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/baz/bag/foo/bar/File.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/foo/bar/baz/bag/1057964041829486103.tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/foo/bar/baz/bag/File.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/foo/bar/baz/bag/File.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +74,14 @@
     "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
+    "last_opened_file_path": "C:/Users/kuznetsov.aa.HITED1UA/IdeaProjects/FilesOJ8"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kuznetsov.aa.HITED1UA\IdeaProjects\FilesOJ8" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -99,14 +112,7 @@
       <option name="project" value="LOCAL" />
       <updated>1673518571323</updated>
     </task>
-    <task id="LOCAL-00004" summary="New Acc">
-      <created>1673584203860</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1673584203860</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -125,7 +131,6 @@
     <MESSAGE value="My first commit" />
     <MESSAGE value="Add first class" />
     <MESSAGE value="Made some tests" />
-    <MESSAGE value="New Acc" />
-    <option name="LAST_COMMIT_MESSAGE" value="New Acc" />
+    <option name="LAST_COMMIT_MESSAGE" value="Made some tests" />
   </component>
 </project>

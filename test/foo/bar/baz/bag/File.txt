@@ -13,7 +13,7 @@ public class Directories {
         return Paths.get("test", String.join(sep, parts));
     }
 
-    static void refreshTestDir() throws Exception {
+    public static void refreshTestDir() throws Exception {
         if (Files.exists(test))
             RmDir.rmdir(test);
         if (!Files.exists(test))
@@ -41,10 +41,9 @@ public class Directories {
         Files.walk(test).forEach(System.out::println);
     }
 
-    static void populateTestDir() throws Exception {
+    public static void populateTestDir() throws Exception {
         for (int i = 0; i < parts.size(); i++) {
             Path variant = makeVariant();
-            System.out.println(variant);
             if (!Files.exists(variant)) {
                 Files.createDirectories(variant);
                 Files.copy(Paths.get("src\\directories\\Directories.java"), variant.resolve("File.txt"));
