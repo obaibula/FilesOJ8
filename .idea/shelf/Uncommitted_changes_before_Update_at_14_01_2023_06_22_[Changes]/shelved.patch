@@ -1,0 +1,123 @@
+Index: src/tests/DirectoryTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package tests;\r\n\r\nimport directories.RmDir;\r\n\r\nimport java.io.IOException;\r\nimport java.nio.file.Files;\r\nimport java.nio.file.Path;\r\nimport java.nio.file.Paths;\r\n\r\npublic class DirectoryTest {\r\n    static Path path = Paths.get(\"Xdir\");\r\n    static void refreshXdir() throws Exception{\r\n        if(Files.exists(path))\r\n            RmDir.rmdir(path);\r\n        if(!Files.exists(path))\r\n            Files.createDirectory(path);\r\n    }\r\n\r\n    public static void main(String[] args) throws Exception {\r\n        refreshXdir();\r\n        Path variant = Paths.get(\"Xdir\", \"Sdir\", \"Wdir\", \"Bdir\");\r\n        Files.createDirectories(variant);\r\n        Files.walk(path)\r\n                .map(source -> {\r\n                    try {\r\n                        return Files.move(source, source.resolveSibling(\"photos\"));\r\n                    } catch (IOException e) {\r\n                        throw new RuntimeException(e);\r\n                    }\r\n                });\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/tests/DirectoryTest.java b/src/tests/DirectoryTest.java
+--- a/src/tests/DirectoryTest.java	(revision 59ca831b91cb431d59b1b5ef957aafd1c9758df2)
++++ b/src/tests/DirectoryTest.java	(date 1673591378273)
+@@ -22,11 +22,9 @@
+         Files.createDirectories(variant);
+         Files.walk(path)
+                 .map(source -> {
+-                    try {
+-                        return Files.move(source, source.resolveSibling("photos"));
+-                    } catch (IOException e) {
+-                        throw new RuntimeException(e);
+-                    }
+-                });
++                    System.out.println(source);
++                    System.out.println(source.resolveSibling("Sieg"));
++                    return source;
++                }).forEach(System.out::println);
+     }
+ }
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"35b8e2ba-1488-4759-afc9-dee585a4f2a1\" name=\"Changes\" comment=\"New Acc\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/uiDesigner.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/directories/Directories.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/directories/RmDir.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/src/tests/DirectoryTest.java\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/DIR_963894092209008414/pre7965761299622748884.non\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/Hello.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/bag/foo/bar/baz/4397038676806047690.tmp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/bag/foo/bar/baz/File.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/bar/baz/bag/foo/4793968052551643864.tmp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/bar/baz/bag/foo/File.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/baz/bag/foo/bar/4890067630416526798.tmp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/baz/bag/foo/bar/File.txt\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/foo/bar/baz/bag/1057964041829486103.tmp\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/test/foo/bar/baz/bag/File.txt\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/AddAndSubtractPaths.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/paths/AddAndSubtractPaths.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/PartsOfPaths.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/paths/PartsOfPaths.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/PathAnalysis.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/paths/PathAnalysis.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/PathInfo.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/paths/PathInfo.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"CodeStyleSettingsInfer\">\r\n    <option name=\"done\" value=\"true\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectCodeStyleSettingsMigration\">\r\n    <option name=\"version\" value=\"2\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2KD9NuW3G2H0qHDKXR5yFpDvJYq\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"autoscrollFromSource\" value=\"true\" />\r\n    <option name=\"autoscrollToSource\" value=\"true\" />\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"ASKED_ADD_EXTERNAL_FILES\": \"true\",\r\n    \"Downloaded.Files.Path.Enabled\": \"false\",\r\n    \"Repository.Attach.Annotations\": \"false\",\r\n    \"Repository.Attach.JavaDocs\": \"false\",\r\n    \"Repository.Attach.Sources\": \"false\",\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\r\n    \"settings.editor.selected.configurable\": \"org.jetbrains.plugins.github.ui.GithubSettingsConfigurable\"\r\n  }\r\n}]]></component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"35b8e2ba-1488-4759-afc9-dee585a4f2a1\" name=\"Changes\" comment=\"\" />\r\n      <created>1673498253383</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1673498253383</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"My first commit\">\r\n      <created>1673498754251</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673498754251</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"Add first class\">\r\n      <created>1673499131498</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673499131498</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"Made some tests\">\r\n      <created>1673518571323</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673518571323</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"New Acc\">\r\n      <created>1673584203860</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1673584203860</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"5\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"My first commit\" />\r\n    <MESSAGE value=\"Add first class\" />\r\n    <MESSAGE value=\"Made some tests\" />\r\n    <MESSAGE value=\"New Acc\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"New Acc\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 59ca831b91cb431d59b1b5ef957aafd1c9758df2)
++++ b/.idea/workspace.xml	(date 1673591250458)
+@@ -1,26 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ChangeListManager">
+-    <list default="true" id="35b8e2ba-1488-4759-afc9-dee585a4f2a1" name="Changes" comment="New Acc">
+-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/directories/Directories.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/directories/RmDir.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/src/tests/DirectoryTest.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/DIR_963894092209008414/pre7965761299622748884.non" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/Hello.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/bag/foo/bar/baz/4397038676806047690.tmp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/bag/foo/bar/baz/File.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/bar/baz/bag/foo/4793968052551643864.tmp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/bar/baz/bag/foo/File.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/baz/bag/foo/bar/4890067630416526798.tmp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/baz/bag/foo/bar/File.txt" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/foo/bar/baz/bag/1057964041829486103.tmp" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/test/foo/bar/baz/bag/File.txt" afterDir="false" />
++    <list default="true" id="35b8e2ba-1488-4759-afc9-dee585a4f2a1" name="Changes" comment="Morning">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/AddAndSubtractPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paths/AddAndSubtractPaths.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/PartsOfPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paths/PartsOfPaths.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/PathAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paths/PathAnalysis.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/PathInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/paths/PathInfo.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/tests/DirectoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/DirectoryTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -56,19 +39,19 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_ADD_EXTERNAL_FILES": "true",
+-    "Downloaded.Files.Path.Enabled": "false",
+-    "Repository.Attach.Annotations": "false",
+-    "Repository.Attach.JavaDocs": "false",
+-    "Repository.Attach.Sources": "false",
+-    "RunOnceActivity.OpenProjectViewOnStart": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
++    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
++    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
++    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="TaskManager">
+     <task active="true" id="Default" summary="Default task">
+@@ -106,7 +89,14 @@
+       <option name="project" value="LOCAL" />
+       <updated>1673584203860</updated>
+     </task>
+-    <option name="localTasksCounter" value="5" />
++    <task id="LOCAL-00005" summary="Morning">
++      <created>1673588691764</created>
++      <option name="number" value="00005" />
++      <option name="presentableId" value="LOCAL-00005" />
++      <option name="project" value="LOCAL" />
++      <updated>1673588691764</updated>
++    </task>
++    <option name="localTasksCounter" value="6" />
+     <servers />
+   </component>
+   <component name="Vcs.Log.Tabs.Properties">
+@@ -126,6 +116,7 @@
+     <MESSAGE value="Add first class" />
+     <MESSAGE value="Made some tests" />
+     <MESSAGE value="New Acc" />
+-    <option name="LAST_COMMIT_MESSAGE" value="New Acc" />
++    <MESSAGE value="Morning" />
++    <option name="LAST_COMMIT_MESSAGE" value="Morning" />
+   </component>
+ </project>
+\ No newline at end of file
